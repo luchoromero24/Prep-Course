@@ -229,7 +229,8 @@ function deEuroAdolar(euro) {
 
 function esVocal(letra) {
   var vocales = ["a", "e", "i", "o", "u"];
-  if (letra.length > 1) console.log("Dato incorrecto");
+  if (letra.length > 1) 
+  console.log("Dato incorrecto");
   for (let i = 0; i < vocales.length; i++) {
    if (letra === vocales[i]) {
         console.log("Es una vocal");
