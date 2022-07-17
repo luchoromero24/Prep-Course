@@ -1,20 +1,23 @@
 // No cambies los nombres de las funciones.
 
-function devolverPrimerElemento(array) {
+function devolverPrimerElemento(arr) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
+return arr.shift()
 }
 
 
-function devolverUltimoElemento(array) {
+function devolverUltimoElemento(arr) {
   // Devuelve el último elemento de un array
   // Tu código:
+  return arr.pop()
 }
-
+devolverUltimoElemento([10, 10, 16, 12]) //=> (12);
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+  return array.length; 
 }
 
 
@@ -23,14 +26,22 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+ let newArr = array.map(function(e){
+    return e + 1; 
+  })
+  return newArr
 }
 
+incrementarPorUno([10, 10, 16, 12]) //=> [11, 11, 17, 13]
 
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+array.push(elemento); 
+return array; 
 }
+agregarItemAlFinalDelArray([10, 10, 16, 12], 10) //=> ([10, 10, 16, 12, 10]);
 
 
 function agregarItemAlComienzoDelArray(array, elemento) {
@@ -38,7 +49,10 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+  array.unshift(elemento); 
+  return array; 
 }
+(agregarItemAlComienzoDelArray([97, 100, 80, 55, 72, 94], "Hola")) //=> (['Hola', 97, 100, 80, 55, 72, 94]);
 
 
 function dePalabrasAFrase(palabras) {
@@ -47,41 +61,66 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-}
 
+return palabras.join(" ") 
+
+}
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-}
+  for (let i = 0; i < array.length; i++) {
+    if(array[i] === elemento){
+      return true;
+    } 
+    }
+      return false;
+  }
+ arrayContiene([10, 10, 16, 12], 10) //=> true;
 
 
 function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+ let suma = 0; 
+  for (let i = 0; i < numeros.length; i++) {
+    suma += numeros[i]
+  }
+  return suma;
 }
-
+agregarNumeros([10, 10, 16]) //=> 36;
 
 function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  let suma = 0; 
+  let promedio = 0; 
+  for (let i = 0; i < resultadosTest.length; i++) {
+    suma += resultadosTest[i] 
+    promedio = suma / resultadosTest.length
+  }
+return promedio; 
 }
-
+promedioResultadosTest([10, 10, 16, 12]) //=> (12);
 
 function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  let mayor = Math.max(...numeros)
+  return mayor
 }
-
+numeroMasGrande([10, 10, 16, 12]) //=> 16;
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+
+  
 }
 
 
