@@ -52,6 +52,7 @@ function eliminarPropiedad (objeto, unaPropiedad) {
 
   delete objeto[unaPropiedad] == null; 
   return objeto; 
+  hola; 
 }
 
 function nuevoUsuario (nombre, email, password) {
